@@ -30,6 +30,30 @@ export const router = new Router({
           lazy(() => import('./pages/app-about/app-about.js')),
         ],
         render: () => html`<app-about></app-about>`
+      },
+      {
+        path: resolveRouterPath('login'),
+        title: 'Login',
+        plugins: [
+          lazy(() => import('./pages/app-login/app-login.js')),
+        ],
+        render: () => html`<app-login></app-login>`
+      },
+      {
+        path: resolveRouterPath('search'),
+        title: 'Pesquisar',
+        plugins: [
+          lazy(() => import('./pages/app-search/app-search.js')),
+        ],
+        render: () => html`<app-search></app-search>`
+      },
+      {
+        path: resolveRouterPath('registry'),
+        title: 'Registre um livro',
+        plugins: [
+          lazy(() => import('./pages/app-registry/app-registry.js')),
+        ],
+        render: () => html`<app-registry></app-registry>`
       }
     ]
   });

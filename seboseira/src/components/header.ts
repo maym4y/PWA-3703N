@@ -12,10 +12,10 @@ export class AppHeader extends LitElement {
   static styles = css`
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      background: var(--app-color-primary);
-      color: white;
+      background-color: #271D1A;
+      color: #D5C9AA;
       padding: 12px;
       padding-top: 4px;
 
@@ -36,6 +36,23 @@ export class AppHeader extends LitElement {
 
     nav a {
       margin-left: 10px;
+    }
+
+    #menuBar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: #D5C9AA;
+      text-decoration: none;
+      padding: 10xp;
+      margin: 10xp;
+      border: 1xp;
+    }
+    
+    #menuBar div {
+      padding: 10xp;
+      margin: 10xp;
+      border: 1xp;
     }
 
     #back-button-block {
@@ -65,7 +82,20 @@ export class AppHeader extends LitElement {
             Back
           </sl-button>` : null}
 
-          <h1>${this.title}</h1>
+          <div id="menuBar">
+            <div id="about-button">
+              <a href="${resolveRouterPath('about')}">Sobre o App</a>
+            </div>
+            <div id="login-button">
+              <a href="${resolveRouterPath('login')}">Login</a>
+            </div>
+            <div id="search-button"
+              <a href="${resolveRouterPath('search')}">Pesquise</a>
+            </div>
+            <div id="registry-button">
+              <a href="${resolveRouterPath('registry')}">Registrar livro</a>
+            </div>
+          </div>
         </div>
       </header>
     `;

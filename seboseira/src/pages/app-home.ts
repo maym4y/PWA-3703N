@@ -1,6 +1,5 @@
 import { LitElement, css, html } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
-import { resolveRouterPath } from '../router';
 
 import '@shoelace-style/shoelace/dist/components/card/card.js';
 import '@shoelace-style/shoelace/dist/components/button/button.js';
@@ -33,6 +32,10 @@ export class AppHome extends LitElement {
     sl-card::part(footer) {
       display: flex;
       justify-content: flex-end;
+    }
+
+    #menuBar {
+      background-color: #271D1A
     }
 
     @media(min-width: 750px) {
@@ -127,8 +130,6 @@ export class AppHome extends LitElement {
               </li>
             </ul>
           </sl-card>
-
-          <sl-button href="${resolveRouterPath('about')}" variant="primary">Navigate to About</sl-button>
         </div>
       </main>
     `;
